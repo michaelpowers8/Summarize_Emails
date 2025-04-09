@@ -8,3 +8,6 @@ text file with the following information:
 - The original text content of the email excluding email attachment content and who the email was sent to/from
 - The time it took for the AI to generate a response
 - The full response of the AI.
+
+This program iterates through all emails that were previously classified as Actionable. Every actionable email is 
+prioritized based on how many actionable phrases were found in the contents of the email.
