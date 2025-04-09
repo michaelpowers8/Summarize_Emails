@@ -1,13 +1,43 @@
 # Summarize_Emails Using ChatGPT
 
-This program is designed to use locally downloadable GPT models from https://ollama.com/search to read and summarize
-the contents of emails. Those summaries are currently added to individual text files. Every single email gets its own
-text file with the following information:
+This program leverages locally downloadable GPT models from [Ollama](https://ollama.com/search) to read and summarize email content. Summaries are saved to individual text files, with each file containing:
 
-- A prompt for the AI model full of instructions to follow
-- The original text content of the email excluding email attachment content and who the email was sent to/from
-- The time it took for the AI to generate a response
-- The full response of the AI.
+- A prompt given to the AI model
+- The original email text (excluding attachments and sender/recipient data)
+- The generation time for the AI response
+- The full AI-generated summary
 
-This program iterates through all emails that were previously classified as Actionable. Every actionable email is 
-prioritized based on how many actionable phrases were found in the contents of the email.
+---
+
+## Processing Logic
+
+The system iterates through all emails previously marked as *Actionable*. These are prioritized based on the number of actionable phrases detected within their content.
+
+The current setup handles ~30,000 actionable emails. With an average processing time of 45 seconds per email, full completion takes approximately 16 days of continuous runtime.
+
+---
+
+## Environment & Model
+
+- **Model:** `llama3.1:latest`
+- **OS:** Windows 11 Pro  
+- **Hardware:**  
+  - 32 GB RAM  
+  - Intel(R) Xeon(R) Gold 6430 @ 2.10 GHz  
+  - 10 Cores, 10 Logical Processors  
+  - No GPU
+
+---
+
+## Project Purpose
+
+The primary objective is to optimize prioritization and response to high volumes of inbound email. By summarizing and surfacing high-impact items, the system enhances operational efficiency.
+
+---
+
+## Disclaimer
+
+This repository is a portfolio backup. All source code and outputs have been modified to remove or obscure client-sensitive data.
+
+To view a demonstration of the full project, contact the author at:  
+📧 **micpowers98@gmail.com**
